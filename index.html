@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Pls be my val</title>
+</head>
+
+<body class="bg-white my-4 mx-auto max-w-lg">
+    <div x-data="{
+            init() {
+                this.params = new URLSearchParams(window.location.search);
+                this.name = this.params.get('name');
+                this.size = 1;
+                this.messages = [
+                    'Please pick yes',
+                    'Don\'t do this baby',
+                    'I promise you\'ll enjoy it.',
+                    'Just say yes',
+                    'I\'m a sweet guy 🥺',
+                    'Ogbeni pick yes joor',
+                    'Oya oya sorry <br> Please pick yes fine girl 🥺',
+                    'Asam Pete Nwa yio ma',
+                    'Small thing bby gyal <br> Just press that green button',
+                    'I love you baby',
+                    'I\'ll cry oh 😭',
+                    'Me self no small oh <br> I go do you 2.5GB make you know say men mount',
+                    'Oya oya',
+                    'Hi there <br> Would you do me the honor of being my Val??',
+                    'We\'ll eat oil rice and watch Passion of Christ together',
+                    'Oh <br> You don\'t like that one? Oya Mount Zion film',
+                    'Oh foreign movies??? <br> Walking Dead'
+                ];
+            }
+        }" class="h-screen flex flex-col justify-center items-center text-center px-4">
+
+        <div>
+            <img src="assets/love-gif.gif" alt="GIF" class="h-[70vw] w-[70vw]"
+                style="animation-iteration-count: infinite;">
+
+            <h1 x-show="size == 1" class="text-2xl" x-text="'Would you be my val 🥺 ' + (name ?? '')"></h1>
+
+            <p class="text-lg" x-html="messages[(size - 1) % messages.length]"></p>
+
+            <div class="flex items-center gap-2 mt-4">
+                <!-- Button "Yes" with conditional positioning -->
+                <button :class="(size >= 4 && size % 2 !== 0) ? 'order-last' : ''" @click="size = 0"
+                    class="bg-green-500 text-white rounded-lg transition-all duration-300"
+                    :style="'padding: ' + (size * 4) + 'px ' + (size * 4) + 'px;'">
+                    Yes
+                </button>
+
+                <!-- Button "No" with conditional positioning -->
+                <button :class="(size >= 4 && size % 2 === 0) ? 'order-last' : ''"
+                    class="bg-red-500 text-white px-1 py-1 rounded-lg" @click="size = size + 1">
+                    No
+                </button>
+            </div>
+        </div>
+
+        <img x-show="size == 0" src="assets/love.gif" alt="GIF" class="h-[70vw] w-[70vw]"
+            style="animation-iteration-count: infinite;">
+        <h1 x-show="size == 0" class="text-2xl" x-html="'Thank you my love 😘, <br> we'll see each other soon'"></h1>
+
+    </div>
+</body>
+
+</html>
