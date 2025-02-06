@@ -36,8 +36,8 @@
                 ];
             }
         }" class="h-screen flex flex-col justify-center items-center text-center px-4">
-
-        <div>
+        
+        <div x-show="size !== 0" class="flex flex-col justify-center items-center  text-center">
             <img src="assets/love-gif.gif" alt="GIF" class="h-[70vw] w-[70vw]"
                 style="animation-iteration-count: infinite;">
 
@@ -61,9 +61,9 @@
             </div>
         </div>
 
-        <img x-show="size == 0" src="assets/love.gif" alt="GIF" class="h-[70vw] w-[70vw]"
+        <img x-cloak x-show="size == 0" src="assets/love.gif" alt="GIF" class="h-[70vw] w-[70vw]"
             style="animation-iteration-count: infinite;">
-        <h1 x-show="size == 0" class="text-2xl" x-html="'Thank you my love 😘, <br> we'll see each other soon'"></h1>
+        <h1 x-cloak x-show="size == 0" class="text-2xl" x-html="'Thank you my love 😘 <br> we\'ll see each other soon'"></h1>
 
     </div>
 </body>
