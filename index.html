@@ -42,7 +42,12 @@
 </head>
 
 <body class="bg-white my-4 mx-auto max-w-lg">
-    <audio id="bg-music" autoplay loop>
+    <audio id="bg-music" autoplay loop x-data="{ playMusic() { 
+        let audio = document.getElementById('bg-music'); 
+        audio.play().catch(() => { 
+            document.addEventListener('click', () => audio.play(), { once: true });
+        });
+        } }" x-init="playMusic()">
         <source src="assets/harmony.mp3" type="audio/mpeg">
         Your browser does not support the audio tag.
     </audio>
