@@ -42,6 +42,11 @@
 </head>
 
 <body class="bg-white my-4 mx-auto max-w-lg">
+    <audio id="bg-music" autoplay loop>
+        <source src="assets/harmony.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
     <div x-data="{
             init() {
                 this.params = new URLSearchParams(window.location.search);
