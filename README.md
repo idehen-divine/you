@@ -30,8 +30,6 @@ You can view the live demo of this web app here:
 
 ![Screenshot2](assets/screenshot2.png)
 
-(*Note: Add your screenshot images for a more personalized README.*)
-
 ---
 
 ## 💡 How to Use
@@ -93,7 +91,7 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 
 ## 👨‍💻 Author
 
-**[dev L0N3LY](https://github.com/yourusername)** – The creator of this fun and playful Valentine’s Day project.
+**[dev L0N3LY](https://github.com/idehen-divine)** – The creator of this fun and playful Valentine’s Day project.
 
 ---
 
