@@ -10,7 +10,7 @@ A fun and interactive Valentine’s Day themed web app built with **Alpine.js** 
 
 You can view the live demo of this web app here:
 
-[**Live Demo**](https://link-to-live-demo.com)
+[**Live Demo**](https://idehen-divine.github.io/you)
 
 ---
 
