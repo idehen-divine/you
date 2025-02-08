@@ -53,11 +53,10 @@
     </audio>
 
     <div x-data="{
-            init() {
-                this.params = new URLSearchParams(window.location.search);
-                this.name = this.params.get('name');
-                this.size = 1;
-                this.messages = [
+            params: new URLSearchParams(window.location.search),
+            name: '',
+            size: 1,
+            messages: [
                     'Please pick yes',
                     'Don\'t do this baby',
                     'I promise you\'ll enjoy it.',
@@ -75,10 +74,12 @@
                     'We\'ll eat oil rice and watch Passion of Christ together',
                     'Oh <br> You don\'t like that one? Oya Mount Zion film',
                     'Oh foreign movies??? <br> Walking Dead'
-                ];
-            }
-        }" class="h-screen flex flex-col justify-center items-center text-center px-4">
-
+                ],
+                init() {
+                    this.name = this.params.get('name') ?? "";
+                }
+            }" class="h-screen flex flex-col justify-center items-center text-center px-4">
+        
         <div x-show="size !== 0" class="flex flex-col justify-center items-center  text-center">
             <img src="assets/love-gif.gif" alt="GIF" style="animation-iteration-count: infinite;">
 
