@@ -14,7 +14,7 @@
     <!-- Open Graph (OG) Tags for better social media sharing -->
     <meta property="og:title" content="Would You Be My Valentine? 💘">
     <meta property="og:description" content="Say yes plssssss 🥺.">
-    <meta property="og:image" content="/assets/seo.png">
+    <meta property="og:image" content="assets/seo.png">
     <meta property="og:url" content="https://xsteelx377.github.io/you">
     <meta property="og:type" content="website">
 
@@ -22,7 +22,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Would You Be My Valentine? 💘">
     <meta name="twitter:description" content="Say yes plssssss 🥺.">
-    <meta name="twitter:image" content="/assets/seo.png">
+    <meta name="twitter:image" content="assets/seo.png">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -32,7 +32,7 @@
           "name": "Would You Be My Valentine? 💘",
           "description": "Say yes plssssss 🥺.",
           "url": "https://xsteelx377.github.io/you",
-          "image": "/assets/seo.png"
+          "image": "assets/seo.png"
         }
         </script>
 
@@ -48,7 +48,7 @@
             document.addEventListener('click', () => audio.play(), { once: true });
         });
         } }" x-init="playMusic()">
-        <source src="/assets/harmony.mp3" type="audio/mpeg">
+        <source src="assets/harmony.mp3" type="audio/mpeg">
         Your browser does not support the audio tag.
     </audio>
 
@@ -81,7 +81,7 @@
             }" class="h-screen flex flex-col justify-center items-center text-center px-4">
         
         <div x-show="size !== 0" class="flex flex-col justify-center items-center  text-center">
-            <img src="/assets/love-gif.gif" alt="GIF" style="animation-iteration-count: infinite;">
+            <img src="assets/love-gif.gif" alt="GIF" style="animation-iteration-count: infinite;">
 
             <h1 x-show="size == 1" class="text-2xl" x-text="'Would you be my val 🥺 ' + (name ?? '')"></h1>
 
@@ -103,7 +103,7 @@
             </div>
         </div>
 
-        <img x-cloak x-show="size == 0" src="/assets/love.gif" alt="GIF" class="h-[70vw] w-[70vw]"
+        <img x-cloak x-show="size == 0" src="assets/love.gif" alt="GIF" class="h-[70vw] w-[70vw]"
             style="animation-iteration-count: infinite;">
         <h1 x-cloak x-show="size == 0" class="text-2xl" x-html="'Thank you my love 😘 <br> we\'ll see each other soon'">
         </h1>
